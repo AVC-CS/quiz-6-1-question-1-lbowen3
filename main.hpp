@@ -9,6 +9,7 @@ using namespace std;
 void getTwoValues(int &, int &);
 int getNextPrime(int);
 int getPrevPrime(int);
+int isPrime(int);
 
 
 // ******************************
@@ -26,9 +27,26 @@ void getTwoValues(int &begin, int &end)
 }
 int getNextPrime(int num)
 {
-
+    while (true)
+    {
+        num++;
+        if(isPrime(num)){
+            return num;
+        }
+    }
 }
 int getPrevPrime(int num)
 {
 
+}
+int isPrime(int num)
+{
+    for(int i=2, i<num, i++)
+    {
+        if (num & i == 0)
+        {
+            return 0;
+        }
+    }
+    return 1;
 }
