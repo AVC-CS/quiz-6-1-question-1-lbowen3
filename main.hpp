@@ -37,7 +37,13 @@ int getNextPrime(int num)
 }
 int getPrevPrime(int num)
 {
-
+    while (true)
+    {
+        num--;
+        if(isPrime(num)){
+            return num;
+        }
+    }
 }
 int isPrime(int num)
 {
